@@ -28,15 +28,15 @@ export default function Comment(props) {
             <span style={{ color: "#B0B3B8" }}>{props.like} </span>
           </div>
         </div>
-        {y.map((x) => {
-          <Reply
-            user={x.username}
-            img={x.userImagePath}
-            com={x.replyText}
-            like={x.likeNum}
-          />;
-        })}
       </div>
+      {y.map((x) => (
+        <Reply
+          user={x.username}
+          img={x.userImagePath}
+          com={x.replyText}
+          like={x.likeNum}
+        />
+      ))}
     </div>
   );
 }

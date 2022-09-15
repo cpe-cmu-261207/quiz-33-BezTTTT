@@ -20,6 +20,7 @@ export default function Home() {
             rep={x.replies}
           />
         ))}
+        <Reply />
       </div>
     </div>
   );
