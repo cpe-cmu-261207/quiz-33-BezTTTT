@@ -3,6 +3,7 @@ import { comments } from "../libs/comments";
 import Reply from "./Reply";
 
 export default function Comment(props) {
+  const y = props.rep;
   return (
     <div>
       <div className="d-flex gap-2 my-2">
@@ -27,7 +28,7 @@ export default function Comment(props) {
             <span style={{ color: "#B0B3B8" }}>{props.like} </span>
           </div>
         </div>
-        {props.rep.map((x) => {
+        {y.map((x) => {
           <Reply
             user={x.username}
             img={x.userImagePath}
